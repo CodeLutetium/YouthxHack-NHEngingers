@@ -2,7 +2,7 @@ const PATHS = {
   MAIN: "/",
   LOGIN: "/login",
   PROFILE: "/profile",
-  ABOUT: "/about-us",
+  ABOUT: "/about_us",
   SHOP: "/shop"
 }
 
