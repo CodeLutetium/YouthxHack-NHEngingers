@@ -4,9 +4,11 @@ import SearchBar from '../components/SearchBar';
 
 function main() {
     return (
-        <div className="main-container">
+        <div className="container">
             <Header />
-
+            <h2>
+                So 
+            </h2>
         </div>
     )
 }
