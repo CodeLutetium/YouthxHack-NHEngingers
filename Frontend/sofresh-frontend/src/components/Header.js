@@ -4,6 +4,7 @@ import HeaderButton from './HeaderButton';
 const Header = ({ title }) => {
   return (
     <header className="header">
+        {/* <img src="./sofresh-logo-zip-file/logo-white.png" /> */}
         <h1>{title}</h1>
         <div className="header-buttons">
             <HeaderButton text="Recommendations"/>
