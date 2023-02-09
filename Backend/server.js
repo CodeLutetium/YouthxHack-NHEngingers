@@ -1,4 +1,5 @@
 const express = require('express');
+const userRoutes = require('./src/routes');
 const app = express();
 const port = 3000;
 
@@ -8,7 +9,7 @@ app.get('/', (req, res) => {
     res.send("Hello world")
 });
 
-// app.use('/api', userRoutes);
+app.use('/api', userRoutes);
 
 app.use('/', (req, res, next) => {
     res.status(404).json({
