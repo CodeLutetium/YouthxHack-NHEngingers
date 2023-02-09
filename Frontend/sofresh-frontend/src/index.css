@@ -193,16 +193,17 @@ img.logo {
 }
 
 .img-listing {
-  /* padding-top: 10px; */
   width: 100px;
   height: 100px;
-  border-radius: 15%;
+  border-radius: 5%;
   margin: 20px;
 }
 
 .price {
-  color: #00a300;
+  color: #295d21;
   margin: 10px;
+  background-color: #f3fbf3;
+  width: 100%;
 }
 
 .farm-name {
