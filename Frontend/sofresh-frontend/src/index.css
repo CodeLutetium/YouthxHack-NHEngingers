@@ -53,3 +53,7 @@ body {
 .main-background {
   background-image: url('../public/background_img.jpg');
 }
+
+.background {
+  background-color: red;
+}
