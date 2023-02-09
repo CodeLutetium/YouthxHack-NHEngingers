@@ -11,6 +11,10 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  font-size: 24px;
+}
+
 .header {
   position: sticky;
   display: flex;
@@ -114,7 +118,7 @@ h1#title {
   text-align: center;
 }
 
-.img-containter {
+.img-container {
   position: relative;
   text-align: center;
   color: #fff;
@@ -208,4 +212,22 @@ img.logo {
 
 .farm-name {
   font-style: italic;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.login-img {
+  flex: 1 1 0;
+  width: 40vw;
+}
+
+.login-container {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
