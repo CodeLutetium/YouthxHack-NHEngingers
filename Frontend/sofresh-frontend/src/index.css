@@ -270,3 +270,13 @@ img.logo {
   color: #295d21;
   margin: 5px;
 }
+
+#login-btn {
+  width: 350px;
+  border-radius: 15px;
+  margin: 0;
+}
+
+#login-txt {
+  text-align: center;
+}
