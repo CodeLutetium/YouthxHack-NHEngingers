@@ -1,21 +1,14 @@
-import './App.css';
-import Button from './components/Button';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import './public'
+import Button from '../components/Button';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
 
 function main() {
-  return (
-    <main className='main-background'>
-      <div className="container">
-      <Header />
-      <div className="container-body">
-        <Button text="Click me!" />
-        <SearchBar />
-      </div>
-      </div>
-    </main>
-  );
+    return (
+        <div className="main-container">
+            <Header />
+
+        </div>
+    )
 }
 
-export default main;
+export default main

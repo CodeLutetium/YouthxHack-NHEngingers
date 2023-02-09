@@ -1,17 +1,18 @@
-import './App.css';
-import Button from './components/Button';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import P from './constants/paths'
+import Main from './pages/main'
+import Login from './pages/login'
+import Shop from './pages/shop'
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <div className="container-body">
-        <Button text="Click me!" />
-        <SearchBar />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path={P.MAIN} element={<Main />} />
+        <Route path={P.LOGIN} element={<Login />} />
+        <Route path={P.SHOP} element={<Shop />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
