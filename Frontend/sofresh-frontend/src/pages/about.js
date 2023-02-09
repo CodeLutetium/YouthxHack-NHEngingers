@@ -17,6 +17,30 @@ function about() {
         <h1>About Us</h1>
         <p className='centered'>SoFresh is an initiative that aims to encourage Singaporeans to purchase locally grown food over imports. By encouraging the purchase of locally grown food, we hope that the increased in demand will help Singapore meet the 30 by 30 goal earlier.</p>
         <p className='centered'>Join us now in searching for the nearest local produce!</p>
+        <h1>What does the symbols represent?</h1>
+        <div className='star-wrapper'>
+          <div className='star-container'>
+            <img className='star-img' src={require('../assets/1star.png')} />
+            <p>
+              <span className='bold-txt'>Fresh</span>
+              <br />Local Produce
+            </p>
+          </div>
+          <div className='star-container'>
+            <img className='star-img' src={require('../assets/2star.png')} />
+            <p>
+              <span className='bold-txt'>Fresh, <br />Quality Assured</span>
+              <br />Local Produce
+            </p>
+          </div>
+          <div className='star-container'>
+            <img className='star-img' src={require('../assets/3star.png')} />
+            <p>
+              <span className='bold-txt'>Fresh, <br />Quality Assured, <br /> Sustainable</span>
+              <br />Local Produce
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -100,6 +100,30 @@ h1#title {
   align-items: center;
 }
 
+.star-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 150px;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.star-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.star-img {
+  width: 200px;
+}
+
+.bold-txt {
+  font-weight: bold;
+}
+
 .bg-img {
   width: 100%;
   height: 80vh;
