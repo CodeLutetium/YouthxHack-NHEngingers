@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Button from '../components/Button';
 
 export default function login() {
   return(
@@ -19,6 +20,8 @@ export default function login() {
               type="password"
               className="searchbar" />
           </div>
+          <Button id='login-btn' text="Login" color="#31C48D" link="/shop"/>
+          <p id='login-txt'>New to SoFresh? Register an account for free</p>
         </div>
       </div>
     </div>
