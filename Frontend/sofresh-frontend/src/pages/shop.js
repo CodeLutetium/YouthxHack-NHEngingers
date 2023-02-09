@@ -14,7 +14,7 @@ function shop() {
             product_price: 3.99,
             product_description: "This vegetable is mingyang's childhood favourite",
             product_location: "NTUC",
-            product_imgfilename: "cabbage.png"
+            product_imgfilename: "/Product_Images/broth.png"
         },
         {
             product_id: 2,
@@ -24,7 +24,7 @@ function shop() {
             product_price: 7,
             product_description: "This vegetable is zhekai's mother's favourite",
             product_location: "ShengShiong",
-            product_imgfilename: "kale.png"
+            product_imgfilename: "/Product_Images/kale.png"
         },
         {
             product_id: 7,
@@ -34,7 +34,7 @@ function shop() {
             product_price: 0.37,
             product_description: "Laid by a chicken",
             product_location: "Giant",
-            product_imgfilename: "egg.png"
+            product_imgfilename: "/Product_Images/kang.png"
         },
         {
             product_id: 10,
@@ -44,7 +44,7 @@ function shop() {
             product_price: 9.99,
             product_description: "crawl",
             product_location: "Giant",
-            product_imgfilename: "snail.png"
+            product_imgfilename: "/Product_Images/cai.png"
         },
         {
             product_id: 21,
@@ -54,7 +54,7 @@ function shop() {
             product_price: 9.81,
             product_description: "runs fast",
             product_location: "Giant",
-            product_imgfilename: "cheetah.png"
+            product_imgfilename: "/Product_Images/xiao.png"
         },
     ]
 
