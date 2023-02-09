@@ -1,21 +1,30 @@
-
+import { useNavigate } from "react-router-dom";
 
 /* 
 LISTING REFERS TO THE LISTINGS SHOWN ON THE LANDING PAGE AND SEARCH COMPONENT. NOT THE INDIVIDUAL PRODUCT PAGE UPON CLICKING ON A LISTING.
 */
 
+var listing_var = '';
+export {listing_var};
+
 const Listing = ({ listing }) => {
-  return (
-    <div className="listing">
-        {/* TODO: CHANGE IMG SOURCE TO PRODUCT_IMGFILENAME FROM JSON PAYLOAD */}
-        <img src={listing.product_imgfilename} alt={listing.product_name} className="img-listing"/>
-        <p>{listing.product_name}<span className="price">${listing.product_price}</span></p>    
-        <div className="listing-bottom-text">
-            <p>{listing.product_type}</p>
-            <p className="farm-name">Produced By: {listing.farm_id}</p> {/* TODO: CHANGE TO FARM_NAME */}
+    let navigate = useNavigate();
+    const onClick = () => {
+        listing_var = listing;
+        navigate("/product");
+    }
+
+    return (
+        <div className="listing" onClick={onClick}>
+            {/* TODO: CHANGE IMG SOURCE TO PRODUCT_IMGFILENAME FROM JSON PAYLOAD */}
+            <img src={listing.product_imgfilename} alt={listing.product_name} className="img-listing"/>
+            <p>{listing.product_name}<span className="price">${listing.product_price}</span></p>    
+            <div className="listing-bottom-text">
+                <p>{listing.product_type}</p>
+                <p className="farm-name">Produced By: {listing.farm_id}</p> {/* TODO: CHANGE TO FARM_NAME */}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Listing
