@@ -21,11 +21,11 @@ const SearchBar = () => {
 
   return <div>
   <input
-   type="search"
-   placeholder="Search products"
-   onChange={handleChange}
-   value={searchInput} 
-   class="searchbar" />
+    type="search"
+    placeholder="Search products"
+    onChange={handleChange}
+    value={searchInput} 
+    className="searchbar" />
   </div>
 };
 

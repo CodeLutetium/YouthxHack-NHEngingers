@@ -5,12 +5,16 @@ const Header = ({ title }) => {
   return (
     <header className="header">
         {/* <img src="./sofresh-logo-zip-file/logo-white.png" /> */}
-        <h1>{title}</h1>
+        <div>
+            <h1>{title}</h1>
+            <p>So near to you, its SoFresh</p>
+        </div>
         <div className="header-buttons">
             <HeaderButton text="Recommendations"/>
             <HeaderButton text="Contact Us"/>
         </div>
     </header>
+    
   )
 }
 
