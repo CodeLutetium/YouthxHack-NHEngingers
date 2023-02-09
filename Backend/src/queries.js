@@ -25,3 +25,26 @@ const addFarm = "INSERT INTO farms (farm_id, farm_name, farm_description, farm_l
 const removeFarm = "DELETE * FROM farms WHERE farm_id = $1";
 const getFarmByID = "SELECT * FROM farms WHERE farm_id = $1";
 const getFarms = "SELECT * FROM farms";
+
+module.exports = {
+    getUsers,
+    createuser,
+    getUserById,
+    deleteUser,
+    getUserCart,
+    addProduct,
+    reduceProduct,
+    removeProduct,
+    clearCart,
+    getProducts,
+    getProductById,
+    getProductsByFarm,
+    getProductsByType,
+    getProductsByKeyword,
+    addProductDB,
+    removeProductDB,
+    addFarm,
+    removeFarm,
+    getFarmByID,
+    getFarms,
+};
