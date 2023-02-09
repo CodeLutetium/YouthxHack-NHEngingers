@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom";
 
 const HeaderButton = ({ text, link }) => {
-    let navigate = useNavigate();
-    const onClick = () => {
-        navigate(link);
-    }
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate(link);
+  }
 
   return (
     <div 
-        className="button-header"
-        onClick={onClick}
+      className="button-header"
+      onClick={onClick}
     >
-        {text}
+      {text}
     </div>
   )
 }
