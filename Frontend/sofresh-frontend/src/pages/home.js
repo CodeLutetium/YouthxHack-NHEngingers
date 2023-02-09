@@ -14,7 +14,7 @@ function home() {
         </div>
         <img className='home-img' src={require('../assets/homepage.png')} />
       </div>
-      <Button />
+      <Button text='Get Started' color='#31C48D' link='/login'/>
     </div>
   )
 }
