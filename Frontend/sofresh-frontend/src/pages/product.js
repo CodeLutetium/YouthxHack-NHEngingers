@@ -19,6 +19,7 @@ function product() {
                         <h2 className="product-label">ID: <span className="product-detail">{listing_var.product_id}</span></h2>
                         <h2 className="product-label">Price: <span className="product-detail-price-border"><span className="product-detail-price">${listing_var.product_price}</span></span></h2>
                         <br />
+                        <h2 className="product-label">Rating: <span className="product-detail">{listing_var.product_rating}</span></h2>
                         <h2 className="product-label">Produced By: <span className="product-detail">{listing_var.farm_id}</span></h2>
                         <h2 className="product-label">Category: <span className="product-detail">{listing_var.product_type}</span></h2>
                         <h2 className="product-label">Description: <span className="product-detail">{listing_var.product_description}</span></h2>

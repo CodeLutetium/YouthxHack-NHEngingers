@@ -22,6 +22,7 @@ const Listing = ({ listing }) => {
             <div className="listing-bottom-text">
                 <p>{listing.product_type}</p>
                 <p className="farm-name">Produced By: {listing.farm_id}</p> {/* TODO: CHANGE TO FARM_NAME */}
+                <p>Rating: {listing.product_rating}</p>
             </div>
         </div>
     )
