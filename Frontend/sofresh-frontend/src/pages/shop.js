@@ -5,7 +5,7 @@ import { FaHeart } from 'react-icons/fa'
 
 function shop() {
     return (
-        <div className="container">
+        <div className="background-shop">
             <Header />
             <div className='container-body'>
                 <p>Support local produce <FaHeart /></p>
