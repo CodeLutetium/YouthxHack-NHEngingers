@@ -3,7 +3,8 @@ const PATHS = {
   LOGIN: "/login",
   PROFILE: "/profile",
   ABOUT: "/about_us",
-  SHOP: "/shop"
+  SHOP: "/shop",
+  PRODUCT: "/product"
 }
 
 export default PATHS;
