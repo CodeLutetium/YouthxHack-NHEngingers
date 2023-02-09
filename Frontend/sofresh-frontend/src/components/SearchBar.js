@@ -24,7 +24,8 @@ const SearchBar = () => {
    type="search"
    placeholder="Search products"
    onChange={handleChange}
-   value={searchInput} />
+   value={searchInput} 
+   class="searchbar" />
   </div>
 };
 
