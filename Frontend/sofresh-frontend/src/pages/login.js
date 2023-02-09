@@ -1,7 +1,26 @@
 import Header from '../components/Header';
 import Button from '../components/Button';
+import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
-export default function login() {
+
+export default function Login() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const navigate = useNavigate();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (!username && !password) {
+      alert("Please do not leave any blank fields!");
+      return
+    }
+
+    navigate("/shop")
+  }
+
   return(
     <div>
       <Header />
@@ -11,16 +30,20 @@ export default function login() {
           <div className='login-item'>
             <h3>Username</h3>
             <input
-              type="form"
-              className="searchbar" />
+              type="input"
+              className="searchbar" 
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
           <div className='login-item'>
             <h3>Password</h3>
             <input
               type="password"
-              className="searchbar" />
+              className="searchbar"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
-          <Button id='login-btn' text="Login" color="#31C48D" link="/shop"/>
+          <Button id='login-btn' text="Login" color="#31C48D" isSubmit={true} onSubmit={onSubmit}/>
           <p id='login-txt'>New to SoFresh? Register an account for free</p>
         </div>
       </div>
