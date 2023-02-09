@@ -12,17 +12,30 @@ h1 {
 }
 
 .header {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding-left: 200px;
-  padding-top: 30px;
+  padding: 10px 30px;
   font-family: 'Khula', sans-serif;
+  height: fit-content;
+  background-color: #fff;
 }
 
-.header-buttons {
-  padding-right: 100px;
+h1#title {
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.header-logo {
+  width: 60px;
 }
 
 .button-header {
