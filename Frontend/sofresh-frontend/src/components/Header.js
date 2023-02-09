@@ -1,20 +1,26 @@
 import PropTypes from 'prop-types';
+import { Navigate, useNavigate } from 'react-router-dom';
 import HeaderButton from './HeaderButton';
 
 const Header = ({ title }) => {
+  let navigate = useNavigate();
+  const onClick = () => {
+    navigate("/")
+  }
+
   return (
     <header className="header">
-        {/* <img src="./sofresh-logo-zip-file/logo-white.png" /> */}
-        <div>
-            <h1>{title}</h1>
-            <p>So near to you, its SoFresh</p>
-        </div>
+      <div className='header-left' onClick={
+        onClick
+      }>
+        <img className='header-logo' src={require('../assets/logo-cropped.png')} />
+        <h1 id='title' >SoFresh</h1>
+      </div>
         <div className="header-buttons">
-            <HeaderButton text="Recommendations"/>
-            <HeaderButton text="Contact Us"/>
+          <HeaderButton text="About"/>
+          <HeaderButton text="Login"/>
         </div>
     </header>
-    
   )
 }
 
