@@ -8,10 +8,12 @@ const Listing = ({ listing }) => {
   return (
     <div className="listing">
         {/* TODO: CHANGE IMG SOURCE TO PRODUCT_IMGFILENAME FROM JSON PAYLOAD */}
-        {/* <img src="/sofresh-logo-zip-file/logo-white.png" alt={product_name} /> */}
-        <p>{listing.product_name}           {listing.product_price}</p>
-        <p>{listing.product_type}</p>
-        <p>{listing.farm_name}</p>
+        <img src={require("../assets/logo-white.png")} alt={listing.product_name} className="img-listing"/>
+        <p>{listing.product_name}<span className="price">${listing.product_price}</span></p>    
+        <div className="listing-bottom-text">
+            <p>{listing.product_type}</p>
+            <p className="farm-name">Produced By: {listing.farm_id}</p> {/* TODO: CHANGE TO FARM_NAME */}
+        </div>
     </div>
   )
 }
