@@ -4,6 +4,7 @@ const checkEmailExists = "SELECT email FROM user_table WHERE email = $1";
 const addUser = "INSERT INTO user_table (user_id, email, username, pw) VALUES (DEFAULT, $1, $2, $3)";
 const getUserByID = "SELECT * FROM user_table WHERE user_id = $1";
 const removeUser = "DELETE FROM user_table WHERE user_id = $1";
+const authenticate = "SELECT * FROM user_table WHERE email = $1 AND pw = $2";
 //farm_table
 const getFarm = "SELECT * FROM farm_table";
 const checkFarmExists = "SELECT farm_name FROM farm_table WHERE farm_name = $1";
@@ -35,6 +36,7 @@ module.exports = {
     addUser,
     getUserByID,
     removeUser,
+    authenticate,
     getFarm,
     checkFarmExists,
     addFarm,

@@ -33,6 +33,18 @@ const getUserByID = (req, res) => {
     });
 };
 
+const authenticate = (req, res) => {
+    const { email, pw } = req.body;
+    pool.query(queries.authenticate, [email, pw], (error, results) => {
+        if (!results.rows.length) {
+            res.send("0");
+        }
+        else {
+            res.send("1");
+        }
+    })
+}
+
 const removeUser = (req, res) => {
     const user_id = parseInt(req.params.user_id);
   
@@ -287,6 +299,7 @@ module.exports = {
     getUser,
     addUser,
     getUserByID,
+    authenticate,
     removeUser,
     // farm_table
     getFarm,
