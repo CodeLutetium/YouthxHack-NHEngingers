@@ -1,50 +1,59 @@
 // user_table
-const getUsers = "SELECT * FROM users";
-const createuser = "INSERT INTO users (user_id, username, password) VALUES ($1, $2, $3)";
-const getUserById = "SELECT * FROM users WHERE user_id = $1";
-const deleteUser =  "DELETE * FROM users WHERE user_id = $1";
-
+const getUser = "SELECT * FROM user_table";
+const checkEmailExists = "SELECT email FROM user_table WHERE email = $1";
+const addUser = "INSERT INTO user_table (user_id, email, username, pw) VALUES (DEFAULT, $1, $2, $3)";
+const getUserByID = "SELECT * FROM user_table WHERE user_id = $1";
+const removeUser = "DELETE FROM user_table WHERE user_id = $1";
+//farm_table
+const getFarm = "SELECT * FROM farm_table";
+const checkFarmExists = "SELECT farm_name FROM farm_table WHERE farm_name = $1";
+const addFarm = "INSERT INTO farm_table (farm_id, farm_name, farm_description, farm_location) VALUES (DEFAULT, $1, $2, $3)";
+const getFarmByID = "SELECT * FROM farm_table WHERE farm_id = $1";
+const removeFarm = "DELETE FROM farm_table WHERE farm_id = $1";
+//product_table
+const getProduct = "SELECT * FROM product_table";
+const getProductByID = "SELECT * FROM product_table WHERE product_id = $1";
+const checkProductExists = "SELECT * FROM product_table WHERE product_name = $1 AND farm_id = $2";
+const addProduct = "INSERT INTO product_table (product_id, product_name, farm_id, product_type, product_price, product_description, product_location, product_imgfile, product_rating) VALUES (DEFAULT, $1, $2, $3, $4, $5, $6, $7, $8)";
+const getProductByFarm = "SELECT * FROM product_table WHERE farm_id = $1";
+const getProductByType = "SELECT * FROM product_table WHERE product_type = $1";
+const getProductByRating = "SELECT * FROM product_table WHERE product_rating = $1";
+const removeProduct = "DELETE FROM product_table WHERE product_id = $1";
 // cart_table
-const getUserCart = "SELECT * FROM carts WHERE user_id = $1";
-const addProduct = "INSERT INTO carts (user_id, product_id, quantity) VALUES ($1, $2, $3)";
-const reduceProduct = "UPDATE carts SET quantity = $1 WHERE user_id = $2 AND product_id = $3"; //Check if deduction method is correct
-const removeProduct = "DELETE * FROM carts WHERE user_id = $1 AND product_id = $2";
-const clearCart = "DELETE * FROM carts WHERE user_id = $1";
-
-// product_table
-const getProducts = "SELECT * FROM products";
-const getProductById = "SELECT * FROM products WHERE product_id = $1";
-const getProductsByFarm = "SELECT * FROM products WHERE farm_id = $1";
-const getProductsByType = "SELECT * FROM products WHERE product_type = $1";
-const getProductsByKeyword = "SELECT * FROM products WHERE product_name = $1"; //Check to see if keyword implementation is correct
-const addProductDB = "INSERT INTO products (product_id, product_name, farm_id, product_type, product_price, product_description, product_location, product_imgfilename) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)";
-const removeProductDB = "DELETE * FROM products WHERE product_id = $1";
-
-// farm_table
-const addFarm = "INSERT INTO farms (farm_id, farm_name, farm_description, farm_location) VALUES ($1, $2, $3, $4)";
-const removeFarm = "DELETE * FROM farms WHERE farm_id = $1";
-const getFarmByID = "SELECT * FROM farms WHERE farm_id = $1";
-const getFarms = "SELECT * FROM farms";
+const getCart = "SELECT * FROM cart_table";
+const getCartByUser = "SELECT * FROM cart_table WHERE user_id = $1";
+const checkProductExistsInCart = "SELECT * FROM cart_table WHERE user_id = $1 AND product_id = $2";
+const increaseCart = "UPDATE cart_table SET quantity = quantity + $3 WHERE user_id = $1 AND product_id = $2";
+const addCart = "INSERT INTO cart_table (user_id, product_id, quantity) VALUES ($1, $2, $3)";
+const clearCart = "DELETE FROM cart_table WHERE user_id = $1";
+const checkProductCount = "SELECT * FROM cart_table WHERE user_id = $1 AND product_id = $2 AND quantity = 1";
+const removeCart = "DELETE FROM cart_table WHERE user_id = $1 AND product_id = $2";
 
 module.exports = {
-    getUsers,
-    createuser,
-    getUserById,
-    deleteUser,
-    getUserCart,
-    addProduct,
-    reduceProduct,
-    removeProduct,
-    clearCart,
-    getProducts,
-    getProductById,
-    getProductsByFarm,
-    getProductsByType,
-    getProductsByKeyword,
-    addProductDB,
-    removeProductDB,
+    getUser,
+    checkEmailExists,
+    addUser,
+    getUserByID,
+    removeUser,
+    getFarm,
+    checkFarmExists,
     addFarm,
-    removeFarm,
     getFarmByID,
-    getFarms,
+    removeFarm,
+    getProduct,
+    getProductByID,
+    checkProductExists,
+    addProduct,
+    getProductByFarm,
+    getProductByType,
+    getProductByRating,
+    removeProduct,
+    getCart,
+    getCartByUser,
+    checkProductExistsInCart,
+    increaseCart,
+    addCart,
+    clearCart,
+    checkProductCount,
+    removeCart,
 };
