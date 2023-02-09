@@ -4,18 +4,6 @@ import { listing_var } from '../components/Listing'
 // TODO: CHANGE LISTING TO BE A PROP PASSED IN FROM THE SHOP PAGE
 
 function product() {
-    // const listing = {
-    //     product_id: 1,
-    //     product_name: "cabbage",
-    //     farm_id: 5,
-    //     product_type: "Poultry",
-    //     product_price: 3.99,
-    //     product_description: "This vegetable is mingyang's childhood favourite",
-    //     product_location: "NTUC",
-    //     product_imgfilename: "/Product_Images/broth.png"
-    // }
-
-    // TODO: ADD GMAPS SUPPORT FOR NEARES STORE
 
     return (
         <div>
@@ -30,6 +18,7 @@ function product() {
                         <h2 className="product-label">Product: <span className="product-detail">{listing_var.product_name}</span></h2>
                         <h2 className="product-label">ID: <span className="product-detail">{listing_var.product_id}</span></h2>
                         <h2 className="product-label">Price: <span className="product-detail-price-border"><span className="product-detail-price">${listing_var.product_price}</span></span></h2>
+                        <br />
                         <h2 className="product-label">Produced By: <span className="product-detail">{listing_var.farm_id}</span></h2>
                         <h2 className="product-label">Category: <span className="product-detail">{listing_var.product_type}</span></h2>
                         <h2 className="product-label">Description: <span className="product-detail">{listing_var.product_description}</span></h2>
