@@ -245,6 +245,7 @@ img.logo {
   flex-direction: row;
   margin-top: 0px;
   gap: 40px;
+  height: calc(100vh - 59.7833px);
 }
 
 .login-img {
