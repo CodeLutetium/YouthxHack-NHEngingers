@@ -21,7 +21,7 @@ const Listing = ({ listing }) => {
             <p>{listing.product_name}<span className="price">${listing.product_price}</span></p>    
             <div className="listing-bottom-text">
                 <p>{listing.product_type}</p>
-                <p className="farm-name">Produced By: {listing.farm_id}</p> {/* TODO: CHANGE TO FARM_NAME */}
+                {/* <p className="farm-name">Produced By: {listing.farm_name}</p> */}
                 <p>Rating: {listing.product_rating}</p>
             </div>
         </div>
