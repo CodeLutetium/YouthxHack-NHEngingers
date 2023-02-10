@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Khula:wght@800&display=swap");
 
+.wrapper, html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
 body, p {
   font-family: 'Hind', sans-serif;
 }
@@ -16,7 +23,10 @@ h3 {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,8 +106,36 @@ h1#title {
 
 .background {
   background-color: #f2f2f2;
-  padding: 50px;
   align-items: center;
+  position: relative;
+}
+
+.about {
+  margin: 200px;
+}
+
+.star-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 150px;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.star-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.star-img {
+  width: 200px;
+}
+
+.bold-txt {
+  font-weight: bold;
 }
 
 .bg-img {
@@ -110,7 +148,7 @@ h1#title {
 .overlay-txt {
   font-family: 'Khula', 'Extra-Bold';
   position: absolute;
-  top: 60%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 96px;
@@ -119,9 +157,9 @@ h1#title {
 }
 
 .img-container {
-  position: relative;
   text-align: center;
-  color: #fff;
+  top: 81px;
+  position: relative;
 }
 
 .centered {
@@ -142,6 +180,7 @@ img.logo {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  height: 100%;
 }
 
 .home-txt-container {
@@ -152,15 +191,19 @@ img.logo {
   margin: 0px 100px;
 }
 
+.logo {
+  position: relative;
+}
+
 .home-logo {
-  width: 200px;
-  margin: 30px auto;
+  width: 300px;
+  margin: 50px auto;
 }
 
 .home-txt {
   font-family: 'Khula', sans-serif;
-  font-weight: 400;
-  color: #31C48D;
+  font-weight: 300;
+  color: #56caa0;
 }
 
 .home-img{
@@ -169,6 +212,12 @@ img.logo {
   margin-left: auto;
   height: 50vh;
 }
+
+.filler {
+  justify-content: center;
+  margin: 50px;
+}
+
 .listings {
   display: flex;
   flex-wrap: wrap;
@@ -221,6 +270,7 @@ img.logo {
   flex-direction: row;
   margin-top: 0px;
   gap: 40px;
+  align-items: flex-start;
 }
 
 .login-img {
@@ -236,6 +286,7 @@ img.logo {
   gap: 20px;
   margin-left: 30px;
   align-items: center;
+  margin-top: 150px;
 }
 
 .container-product {
@@ -278,6 +329,14 @@ img.logo {
   width: 350px;
   border-radius: 15px;
   margin: 0;
+  margin-top: 15px;
+}
+
+#reg-btn {
+  width: 350px;
+  border-radius: 15px;
+  margin: 0;
+  margin-top: -10px;
 }
 
 #login-txt {
