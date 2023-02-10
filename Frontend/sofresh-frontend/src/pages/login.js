@@ -13,7 +13,7 @@ export default function Login() {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (!username && !password) {
+    if (!username || !password) {
       alert("Please do not leave any blank fields!");
       return
     }
@@ -44,7 +44,7 @@ export default function Login() {
             />
           </div>
           <Button id='login-btn' text="Login" color="#31C48D" isSubmit={true} onSubmit={onSubmit}/>
-          <p id='login-txt'>New to SoFresh? Register an account for free</p>
+          <Button id='reg-btn' text="Register" color="#10412f" isSubmit={true} onSubmit={onSubmit}/>
         </div>
       </div>
     </div>

@@ -302,6 +302,14 @@ img.logo {
   width: 350px;
   border-radius: 15px;
   margin: 0;
+  margin-top: 15px;
+}
+
+#reg-btn {
+  width: 350px;
+  border-radius: 15px;
+  margin: 0;
+  margin-top: -10px;
 }
 
 #login-txt {
