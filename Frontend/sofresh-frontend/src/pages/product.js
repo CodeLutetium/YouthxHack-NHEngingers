@@ -12,7 +12,7 @@ function product() {
             </>
             <div className="background">
                 <div className="container-product">
-                    <img src={listing_var.product_imgfile} alt={listing_var.product_name} className="img-product"/>
+                    <img src={`/Product_Images/${listing_var.product_imgfile}`} alt={listing_var.product_name} className="img-product"/>
 
                     <div className="product-details">
                         <h2 className="product-label">Product: <span className="product-detail">{listing_var.product_name}</span></h2>
