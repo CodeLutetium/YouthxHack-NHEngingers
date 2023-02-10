@@ -13,9 +13,9 @@ function Shop() {
             method: 'GET',
         })
         const farmData = await response.json()
-        console.log(farmData)
+        // console.log(farmData)
         let farmName = farmData[0].farm_name
-        console.log(farmName)
+        // console.log(farmName)
         farm.farm_name = farmName
     }
 
@@ -31,6 +31,15 @@ function Shop() {
             getFarmName(prod, prod.farm_id)
         }
     }
+
+    async function sendSearch(SearchValue) {
+        const response = await fetch(`http://localhost:8000/api/product/search/${SearchValue}`, {
+            method: 'GET',
+        })
+        const result = await response.json()
+        console.log(result)
+        setProducts(result)
+      }
     
     useEffect(() =>{
         getAllProducts();
@@ -44,7 +53,7 @@ function Shop() {
                 <p>Order from the comfort of your home, or find out the nearest grocer that sells what you're looking for.</p>
                 <br />
                 <br />
-                <SearchBar />
+                <SearchBar sendSearch={sendSearch}/>
                 <br />
                 <Listings listings={products}/>
             </div>

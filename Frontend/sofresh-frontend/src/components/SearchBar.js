@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({ sendSearch }) => {
   const [searchInput, setSearchInput] = useState("");
   
   const products = [
@@ -11,12 +11,6 @@ const SearchBar = () => {
   const handleChange = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
-  
-    if (searchInput.length > 0) {
-      products.filter((products) => {
-        return products.name.match(searchInput);
-      })
-    };
   };
 
   return <div>
@@ -25,6 +19,9 @@ const SearchBar = () => {
     placeholder="&#xf002;"
     onChange={handleChange}
     value={searchInput} 
+    onSubmit={() => 
+      sendSearch(searchInput)
+    }
     className="searchbar" />
   </div>
 };
