@@ -16,8 +16,8 @@ const Listing = ({ listing }) => {
 
     return (
         <div className="listing" onClick={onClick}>
-            {/* TODO: CHANGE IMG SOURCE TO PRODUCT_IMGFILENAME FROM JSON PAYLOAD */}
-            <img src={listing.product_imgfile} alt={listing.product_name} className="img-listing"/>
+            <img src={`/Product_Images/${listing.product_imgfile}`} alt={listing.product_name} className="img-listing"/>
+            {/* <img src={require(`${listing.product_imgfile}`)} alt={listing.product_name} className="img-listing"/> */}
             <p>{listing.product_name}<span className="price">${listing.product_price}</span></p>    
             <div className="listing-bottom-text">
                 <p>{listing.product_type}</p>
