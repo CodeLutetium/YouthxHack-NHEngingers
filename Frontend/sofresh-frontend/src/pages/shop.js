@@ -3,65 +3,38 @@ import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import Listings from '../components/Listings';
 import { FaHeart } from 'react-icons/fa'
+import { useState, useEffect } from 'react'
 
-function shop() {
-    const listings = [
-        {
-            product_id: 1,
-            product_name: "cabbage",
-            farm_id: 5,
-            product_type: "Poultry",
-            product_price: 3.99,
-            product_description: "This vegetable is mingyang's childhood favourite",
-            product_location: "NTUC",
-            product_imgfilename: "/Product_Images/broth.png",
-            product_rating: 3
-        },
-        {
-            product_id: 2,
-            product_name: "KALE",
-            farm_id: 3,
-            product_type: "Vegetable",
-            product_price: 7,
-            product_description: "This vegetable is zhekai's mother's favourite",
-            product_location: "ShengShiong",
-            product_imgfilename: "/Product_Images/kale.png",
-            product_rating: 2
-        },
-        {
-            product_id: 7,
-            product_name: "egg",
-            farm_id: 9,
-            product_type: "mammal offspring",
-            product_price: 0.37,
-            product_description: "Laid by a chicken",
-            product_location: "Giant",
-            product_imgfilename: "/Product_Images/kang.png",
-            product_rating: 1
-        },
-        {
-            product_id: 10,
-            product_name: "snail",
-            farm_id: 100,
-            product_type: "no legs lol",
-            product_price: 9.99,
-            product_description: "crawl",
-            product_location: "Giant",
-            product_imgfilename: "/Product_Images/cai.png",
-            product_rating: 3
-        },
-        {
-            product_id: 21,
-            product_name: "cheetah",
-            farm_id: 2,
-            product_type: "mammal",
-            product_price: 9.81,
-            product_description: "runs fast",
-            product_location: "Giant",
-            product_imgfilename: "/Product_Images/xiao.png",
-            product_rating: 3
-        },
-    ]
+function Shop() {
+    const [products, setProducts] = useState([]);
+
+    async function getFarmName(farm, farm_id) {
+        const response = await fetch(`http://localhost:3001/api/farm/${farm_id}`, {
+            method: 'GET',
+        })
+        const farmData = await response.json()
+        console.log(farmData)
+        let farmName = farmData[0].farm_name
+        console.log(farmName)
+        farm.farm_name = farmName
+    }
+
+    async function getAllProducts() {
+        const response = await fetch('http://localhost:3001/api/product', {
+            method: 'GET',
+        })
+        const responseData = await response.json()
+        // console.log(responseData)
+        setProducts(responseData)
+
+        for (let prod of responseData) {   
+            getFarmName(prod, prod.farm_id)
+        }
+    }
+    
+    useEffect(() =>{
+        getAllProducts();
+      },[])
 
     return (
         <div className="background-shop">
@@ -73,10 +46,10 @@ function shop() {
                 <br />
                 <SearchBar />
                 <br />
-                <Listings listings={listings}/>
+                <Listings listings={products}/>
             </div>
         </div>
     )
 }
 
-export default shop
+export default Shop

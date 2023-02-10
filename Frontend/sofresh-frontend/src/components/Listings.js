@@ -2,6 +2,7 @@ import Listing from "./Listing"
 
 
 const Listings = ({ listings }) => {
+
   return (
     <div className="listings">
         {listings.map(

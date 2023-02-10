@@ -12,7 +12,7 @@ function product() {
             </>
             <div className="background">
                 <div className="container-product">
-                    <img src={listing_var.product_imgfile} alt={listing_var.product_name} className="img-product"/>
+                    <img src={`/Product_Images/${listing_var.product_imgfile}`} alt={listing_var.product_name} className="img-product"/>
 
                     <div className="product-details">
                         <h2 className="product-label">Product: <span className="product-detail">{listing_var.product_name}</span></h2>
@@ -20,7 +20,7 @@ function product() {
                         <h2 className="product-label">Price: <span className="product-detail-price-border"><span className="product-detail-price">${listing_var.product_price}</span></span></h2>
                         <br />
                         <h2 className="product-label">Rating: <span className="product-detail">{listing_var.product_rating}</span></h2>
-                        <h2 className="product-label">Produced By: <span className="product-detail">{listing_var.farm_id}</span></h2>
+                        <h2 className="product-label">Produced By: <span className="product-detail">{listing_var.farm_name}</span></h2>
                         <h2 className="product-label">Category: <span className="product-detail">{listing_var.product_type}</span></h2>
                         <h2 className="product-label">Description: <span className="product-detail">{listing_var.product_description}</span></h2>
                         <h2 className="product-label">Nearest Store: <span className="product-detail">{listing_var.product_location}</span></h2>
