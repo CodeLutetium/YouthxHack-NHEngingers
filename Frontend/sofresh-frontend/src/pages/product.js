@@ -1,5 +1,6 @@
 import Header from "../components/Header"
 import { listing_var } from '../components/Listing'
+import Button from "../components/Button"
 
 // TODO: CHANGE LISTING TO BE A PROP PASSED IN FROM THE SHOP PAGE
 
@@ -24,6 +25,8 @@ function product() {
                         <h2 className="product-label">Category: <span className="product-detail">{listing_var.product_type}</span></h2>
                         <h2 className="product-label">Description: <span className="product-detail">{listing_var.product_description}</span></h2>
                         <h2 className="product-label">Nearest Store: <span className="product-detail">{listing_var.product_location}</span></h2>
+                        <br />
+                        <Button text="Buy Online"/>
                     </div>
                 </div>
             </div>
