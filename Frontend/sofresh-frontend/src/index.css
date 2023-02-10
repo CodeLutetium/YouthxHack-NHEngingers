@@ -6,6 +6,7 @@
   height: 100%;
   margin: 0;
   background-color: #f2f2f2;
+  position: relative;
 }
 
 body, p {
@@ -22,7 +23,10 @@ h3 {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,6 +107,11 @@ h1#title {
 .background {
   background-color: #f2f2f2;
   align-items: center;
+  position: relative;
+}
+
+.about {
+  margin: 200px;
 }
 
 .star-wrapper {
@@ -139,7 +148,7 @@ h1#title {
 .overlay-txt {
   font-family: 'Khula', 'Extra-Bold';
   position: absolute;
-  top: 60%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 96px;
@@ -148,9 +157,9 @@ h1#title {
 }
 
 .img-container {
-  position: relative;
   text-align: center;
-  color: #fff;
+  top: 81px;
+  position: relative;
 }
 
 .centered {
@@ -180,6 +189,10 @@ img.logo {
   align-self: center;
   align-content: center;
   margin: 0px 100px;
+}
+
+.logo {
+  position: relative;
 }
 
 .home-logo {
